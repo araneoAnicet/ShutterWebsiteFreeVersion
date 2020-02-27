@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('site.static', filename='css/custom.css') }}">
+    </head>
+<body>
+    <div id="root">
+       
+
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand">Navbar</a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+    </div>
+
+    {% block javascript %}
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="module" src="{{ url_for('site.static', filename='js/base.js') }}"></script>
+    
+    {% endblock %}    
+</body>
+</html>
