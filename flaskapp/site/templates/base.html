@@ -17,8 +17,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script type="module" src="{{ url_for('site.static', filename='js/base.js') }}"></script>
 
-  
-  
+
   {% endblock %}  
     <div id="root">
        
@@ -30,12 +29,13 @@
       <p v-if="is_signed_in" class="h5">Hello again, [[ username ]]!</p>
     
   </nav>
-
+  {% block loading_spinner %}
   <div class="text-center">
     <div v-if="is_spinning" class="spinner-border" style="width: 6rem; height: 6rem; top: 50%;" role="status">
       <span class="sr-only">Loading...</span>
     </div>
   </div>
+  {% endblock %}
 {% endblock %}
 
 

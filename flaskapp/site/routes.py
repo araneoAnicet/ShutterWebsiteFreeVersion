@@ -4,5 +4,5 @@ mod = Blueprint('site', __name__, template_folder='templates', static_folder='st
 
 @mod.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('main.html')
 

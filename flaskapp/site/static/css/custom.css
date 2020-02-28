@@ -5,3 +5,13 @@ body {
 .exo-font {
     font-family: 'Exo 2';
 }
+
+.centred-box {
+    display: table;
+    margin: 0 auto;
+}
+
+.centred-box-item {
+    width: 24em;
+    height: 5em;
+}

@@ -1,4 +1,4 @@
-new Vue({
+var VueObject = new Vue({
     el: '#root',
     delimiters: [
         '[[', ']]'
@@ -28,3 +28,4 @@ new Vue({
     }
 });
 
+export default VueObject;

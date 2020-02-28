@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>main page</title>
+{% endblock %}
+
+{% block loading_spinner %} {% endblock %}
+
+
+{% block content %}
+
+<div class="btn-group btn-group-lg centred-box" style="margin-top: 10%;" role="group">
+    <button type="button" class="btn btn-warning btn-xs centred-box-item" style="margin-right: 0.5em;"><h3 class="exo-font">Home Page</h3></button>
+    <button type="button" class="btn btn-warning btn-xs centred-box-item"><h3 class="exo-font">Search</h3></button>
+    <button type="button" class="btn btn-warning btn-xs centred-box-item" style="margin-left: 0.5em;"><h3 class="exo-font">Messages</h3></button>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="module" src="{{ url_for('site.static', filename='js/main.js') }}"></script>
+{% endblock %}  
