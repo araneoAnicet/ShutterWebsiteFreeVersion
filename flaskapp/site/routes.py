@@ -6,3 +6,7 @@ mod = Blueprint('site', __name__, template_folder='templates', static_folder='st
 def index():
     return render_template('main.html')
 
+
+@mod.route('/registration')
+def registration():
+    return render_template('registration.html')

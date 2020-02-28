@@ -4,6 +4,7 @@ new Vue({
         '[[', ']]'
     ],
     data: {
+        message: 'Hello from vue!',
         is_spinning: false,
         is_signed_in: false,
         username: 'username'

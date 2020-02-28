@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>main page</title>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="centred-box jumbotron" style="width: 60em; margin-top: 10%;">
+    <h3>Who are you?</h3>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <button class="btn btn-outline-warning">Model</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline-secondary">Photographer</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline-secondary">Visagiste</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline-secondary">Brand</button>
+        </li>
+      </ul>
+
+    <small>Profession description</small>
+    <form id="registration-form">
+        <div class="row">
+            <div class="form-group col">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control"  aria-describedby="nameHelp" placeholder="Name">
+              </div>
+              <div class="form-group col">
+                <label for="exampleInputPassword1">Surname</label>
+                <input type=text" class="form-control"  placeholder="Surname">
+              </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group col">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control"  placeholder="Password">
+              </div>
+        </div>
+        
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="module" src="{{ url_for('site.static', filename='js/registration.js') }}"></script>
+{% endblock %}  

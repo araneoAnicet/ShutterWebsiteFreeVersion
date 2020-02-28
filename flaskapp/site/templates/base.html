@@ -11,19 +11,17 @@
     
     </head>
     {% endblock %}
-<body>
-
-  {% block javascript %}
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script type="module" src="{{ url_for('site.static', filename='js/base.js') }}"></script>
-
-
-  {% endblock %}  
+    {% block javascript %}
+      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+      <script type="module" src="{{ url_for('site.static', filename='js/base.js') }}"></script>
+    
+    {% endblock %}  
+    <body>
     <div id="root">
        
 {% block navbar %}
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand exo-font">Shutter</a>
+    <a class="navbar-brand exo-font" href="{{ url_for('site.index') }}">Shutter</a>
     
       <button v-if="!is_signed_in" class="btn btn-outline-warning btn-lg exo-font" type="button">create account</button>
       <p v-if="is_signed_in" class="h5">Hello again, [[ username ]]!</p>
