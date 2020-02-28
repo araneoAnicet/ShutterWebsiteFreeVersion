@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+  {% block head %}
     <head>
-    <title>Test</title>
+    {% block title %}<title></title> {% endblock %}
     <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('site.static', filename='css/custom.css') }}">
 
@@ -9,6 +10,7 @@
 
     
     </head>
+    {% endblock %}
 <body>
 
   {% block javascript %}
@@ -20,7 +22,7 @@
   {% endblock %}  
     <div id="root">
        
-
+{% block navbar %}
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand exo-font">Shutter</a>
     
@@ -34,7 +36,11 @@
       <span class="sr-only">Loading...</span>
     </div>
   </div>
+{% endblock %}
 
+
+{% block content %}
+{% endblock %}
 
 
     </div>
